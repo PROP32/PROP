@@ -3,9 +3,11 @@ package prop.assignment0;
 import java.io.IOException;
 
 public class Parser implements IParser {
+    Tokenizer tk;
+
     @Override
     public void open(String fileName) throws IOException, TokenizerException {
-
+        tk.open(fileName);
     }
 
     @Override
@@ -15,6 +17,6 @@ public class Parser implements IParser {
 
     @Override
     public void close() throws IOException {
-
+        tk.close();
     }
 }
