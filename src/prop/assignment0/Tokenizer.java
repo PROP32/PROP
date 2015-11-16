@@ -76,7 +76,7 @@ public class Tokenizer implements ITokenizer {
             getChar();
         }
     }
-
+    //TODO Use regex patterns instead?
     public void lookup(char ch){
         switch (ch){
             case '(':
