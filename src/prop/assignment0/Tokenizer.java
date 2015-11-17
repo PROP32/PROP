@@ -4,12 +4,13 @@ import java.io.IOException;
 
 public class Tokenizer implements ITokenizer {
 
-    Scanner sc = new Scanner();
-    char nextChar = ' ';
-    Token nextToken;
+    private Scanner sc;
+    private char nextChar;
+    private Token nextToken;
 
-    char[] lexeme = new char[100];
-    int lexlen;
+    private char[] lexeme;
+    private int lexlen;
+    private Lexeme lex = null;
 
     int charclass;
 
@@ -19,6 +20,12 @@ public class Tokenizer implements ITokenizer {
     final int UNKNOWN = 99;
     final int EOF = -1;
 
+    public Tokenizer(){
+        this.sc = new Scanner();
+        this.nextChar = ' ';
+        this.lexeme = new char[100];
+    }
+
     @Override
     public void open(String fileName) throws IOException, TokenizerException {
         sc.open(fileName);
@@ -26,13 +33,13 @@ public class Tokenizer implements ITokenizer {
 
     @Override
     public Lexeme current() {
-        Lexeme lex = new Lexeme(nextChar,nextToken);
         return lex;
     }
 
     @Override
     public void moveNext() throws IOException, TokenizerException {
-        sc.moveNext();
+        this.lex();
+        lex = new Lexeme(new String(lexeme), nextToken);
     }
 
     @Override
@@ -166,6 +173,8 @@ public class Tokenizer implements ITokenizer {
                 lexeme[3] = 0;
                 break;
         } // Switch
+
+        //debug
         String output = "";
         for(char str : lexeme){
             output = output + str;
