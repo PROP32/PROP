@@ -4,8 +4,6 @@ public class AssignmentNode implements INode {
 
     // <assign> -> id, '=', <expr>, ';'
 
-    ExpressionNode en = new ExpressionNode();
-
     @Override
     public Object evaluate(Object[] args) throws Exception {
         return null;

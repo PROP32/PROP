@@ -4,7 +4,6 @@ public class ExpressionNode implements INode {
 
     // <expr> -> <term>, [('+' | '-'), <expr>]
 
-    TermNode tn = new TermNode();
 
     @Override
     public Object evaluate(Object[] args) throws Exception {
