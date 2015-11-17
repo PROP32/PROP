@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="171c5f10-fe4e-4f1c-a4cf-b21b2965a753" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/AssignmentNode.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/AssignmentNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/ExpressionNode.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/ExpressionNode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/Parser.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/Parser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/TermNode.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/TermNode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/Tokenizer.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/Tokenizer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/AssignmentNode.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/AssignmentNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/ExpressionNode.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/ExpressionNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/FactorNode.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/FactorNode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/Parser.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/TermNode.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/TermNode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/Tokenizer.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/Tokenizer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/debugger.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/debugger.java" />
     </list>
     <ignored path="PROP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,14 +33,14 @@
           <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Parser.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.36201116">
-                  <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+                <state vertical-scroll-proportion="0.57733536">
+                  <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1365#1366#0" expanded="true" />
-                    <element signature="e#1392#1393#0" expanded="true" />
-                    <element signature="e#1431#1432#0" expanded="true" />
-                    <element signature="e#1458#1459#0" expanded="true" />
+                    <element signature="e#1785#1786#0" expanded="true" />
+                    <element signature="e#1812#1813#0" expanded="true" />
+                    <element signature="e#1851#1852#0" expanded="true" />
+                    <element signature="e#1878#1879#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -58,11 +50,11 @@
             <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Tokenizer.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="177" column="32" selection-start-line="177" selection-start-column="32" selection-end-line="177" selection-end-column="32" />
+                  <caret line="180" column="32" selection-start-line="180" selection-start-column="32" selection-end-line="180" selection-end-column="32" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#4602#4603#0" expanded="true" />
-                    <element signature="e#4639#4640#0" expanded="true" />
+                    <element signature="e#4615#4616#0" expanded="true" />
+                    <element signature="e#4652#4653#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -112,11 +104,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="debugger.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="debugger.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/prop/assignment0/debugger.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+                <state vertical-scroll-proportion="0.4961715">
+                  <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
                   <folding />
                 </state>
               </provider>
@@ -135,10 +127,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Lexeme.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Lexeme.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Lexeme.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.34189945">
+                <state vertical-scroll-proportion="0.0">
                   <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
                   <folding>
                     <element signature="e#265#266#0" expanded="true" />
@@ -219,9 +211,9 @@
         <option value="$PROJECT_DIR$/src/prop/assignment0/ExpressionNode.java" />
         <option value="$PROJECT_DIR$/src/prop/assignment0/TermNode.java" />
         <option value="$PROJECT_DIR$/src/prop/assignment0/AssignmentNode.java" />
-        <option value="$PROJECT_DIR$/src/prop/assignment0/Tokenizer.java" />
         <option value="$PROJECT_DIR$/src/prop/assignment0/debugger.java" />
         <option value="$PROJECT_DIR$/src/prop/assignment0/Parser.java" />
+        <option value="$PROJECT_DIR$/src/prop/assignment0/Tokenizer.java" />
       </list>
     </option>
   </component>
@@ -659,7 +651,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26218852" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26218852" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26218852" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -712,10 +704,10 @@
           <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1365#1366#0" expanded="true" />
-            <element signature="e#1392#1393#0" expanded="true" />
-            <element signature="e#1431#1432#0" expanded="true" />
-            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#1785#1786#0" expanded="true" />
+            <element signature="e#1812#1813#0" expanded="true" />
+            <element signature="e#1851#1852#0" expanded="true" />
+            <element signature="e#1878#1879#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -726,8 +718,8 @@
           <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4602#4603#0" expanded="true" />
-            <element signature="e#4639#4640#0" expanded="true" />
+            <element signature="e#4615#4616#0" expanded="true" />
+            <element signature="e#4652#4653#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -836,10 +828,10 @@
           <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1365#1366#0" expanded="true" />
-            <element signature="e#1392#1393#0" expanded="true" />
-            <element signature="e#1431#1432#0" expanded="true" />
-            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#1785#1786#0" expanded="true" />
+            <element signature="e#1812#1813#0" expanded="true" />
+            <element signature="e#1851#1852#0" expanded="true" />
+            <element signature="e#1878#1879#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -850,8 +842,8 @@
           <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4602#4603#0" expanded="true" />
-            <element signature="e#4639#4640#0" expanded="true" />
+            <element signature="e#4615#4616#0" expanded="true" />
+            <element signature="e#4652#4653#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -968,10 +960,10 @@
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1365#1366#0" expanded="true" />
-            <element signature="e#1392#1393#0" expanded="true" />
-            <element signature="e#1431#1432#0" expanded="true" />
-            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#1785#1786#0" expanded="true" />
+            <element signature="e#1812#1813#0" expanded="true" />
+            <element signature="e#1851#1852#0" expanded="true" />
+            <element signature="e#1878#1879#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1127,29 +1119,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/debugger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Tokenizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="177" column="32" selection-start-line="177" selection-start-column="32" selection-end-line="177" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4602#4603#0" expanded="true" />
-            <element signature="e#4639#4640#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Lexeme.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34189945">
+        <state vertical-scroll-proportion="0.0">
           <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
           <folding>
             <element signature="e#265#266#0" expanded="true" />
@@ -1162,16 +1134,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Parser.java">
+    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/debugger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36201116">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.4961715">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Tokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="180" column="32" selection-start-line="180" selection-start-column="32" selection-end-line="180" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1365#1366#0" expanded="true" />
-            <element signature="e#1392#1393#0" expanded="true" />
-            <element signature="e#1431#1432#0" expanded="true" />
-            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#4615#4616#0" expanded="true" />
+            <element signature="e#4652#4653#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57733536">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1785#1786#0" expanded="true" />
+            <element signature="e#1812#1813#0" expanded="true" />
+            <element signature="e#1851#1852#0" expanded="true" />
+            <element signature="e#1878#1879#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -19,7 +19,17 @@ public class Parser implements IParser {
 
     @Override
     public INode parse() throws IOException, TokenizerException, ParserException {
-        
+        /*for(int i = 0; i < 20; i++){
+            Lexeme l = tk.current();
+            System.out.println("shitty token added " + l.token() + ": " + l.value());
+            lexemes.add(l);
+        }*/
+        do{
+            Lexeme l = tk.current();
+            lexemes.add(l);
+        }while(lexemes.get(lexemes.size()-1).token() != Token.EOF);
+        System.out.println("lexemes = " + lexemes.size());
+        buildStream();
         return new AssignmentNode();
         //return parseAssignment();
     }
