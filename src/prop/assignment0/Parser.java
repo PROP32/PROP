@@ -2,15 +2,13 @@ package prop.assignment0;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.regex.Pattern;
 
 public class Parser implements IParser {
     Tokenizer tk = new Tokenizer();
     ArrayList<Lexeme> lexemes = new ArrayList<>();
-    String stream = "";
-    Pattern intpat = Pattern.compile("^[0-9]");
-    Pattern idpat = Pattern.compile("^[a-z]+");
 
+    ArrayList<Lexeme> stream = new ArrayList<>();
+    Lexeme nextLex;
 
     @Override
     public void open(String fileName) throws IOException, TokenizerException {
@@ -19,19 +17,19 @@ public class Parser implements IParser {
 
     @Override
     public INode parse() throws IOException, TokenizerException, ParserException {
-        /*for(int i = 0; i < 20; i++){
-            Lexeme l = tk.current();
-            System.out.println("shitty token added " + l.token() + ": " + l.value());
-            lexemes.add(l);
-        }*/
         do{
             Lexeme l = tk.current();
             lexemes.add(l);
         }while(lexemes.get(lexemes.size()-1).token() != Token.EOF);
         System.out.println("lexemes = " + lexemes.size());
         buildStream();
-        return new AssignmentNode();
-        //return parseAssignment();
+
+        parseIdentifier();
+
+        System.out.println(stream); // Just for testing
+        System.out.println(nextLex); // Just for testing
+
+        return parseAssignment();
     }
 
     @Override
@@ -40,37 +38,72 @@ public class Parser implements IParser {
     }
 
     public void buildStream(){
-        for(Lexeme lex : lexemes){
-            stream = stream + lex.value().toString();
+        for(Lexeme lex : lexemes) {
+            stream.add(lex);
+        }
+        nextLex = stream.get(0);
+    }
+
+    public void nextLexeme(){
+        stream.remove(0);
+        nextLex = stream.get(0);
+        System.out.print(nextLex+"\n");
+    }
+
+    public INode parseAssignment(){
+        // id, '=', expr, ';'
+        if(parseIdentifier()){
+            nextLexeme();
+            if(nextLex.token() == Token.ASSIGN_OP){
+                nextLexeme();
+                parseExpression();
+                if(nextLex.token() == Token.SEMICOLON){
+                    System.out.print("Great success!");
+                    return new AssignmentNode();
+                }
+            }
+        }
+        return null;
+    }
+
+    private void parseExpression() {
+        // term , [ ( '+' | '-' ) , expr ]
+        parseTerm();
+        if(nextLex.token() == Token.ADD_OP || nextLex.token() == Token.SUB_OP){
+            nextLexeme();
+            parseExpression();
         }
     }
 
-    //TODO get a list of tokens from Tokenizer
-
-    public INode parseAssignment(){
-        INode id = parseIdentifier();
-        // check'='
-        INode exp = parseExpression();
-        return null;
+    private void parseTerm() {
+        // factor , [ ( '*' | '/' ) , expr ]
+        parseFactor();
+        if(nextLex.token() == Token.MULT_OP || nextLex.token() == Token.DIV_OP){
+            nextLexeme();
+            parseTerm();
+        }
     }
 
-    private INode parseExpression() {
-        INode term = parseTerm();
-        // check + or -
-        return null;
+    private void parseFactor() {
+        // int | '(' , expr , ')'
+        if(nextLex.token() == Token.INT_LIT){
+            nextLexeme();
+        }else if(nextLex.token() == Token.LEFT_PAREN){
+            nextLexeme();
+            parseExpression();
+            if(nextLex.token() == Token.RIGHT_PAREN){
+                nextLexeme();
+            }
+        }
     }
 
-    private INode parseTerm() {
-        INode factor = parseFactor();
-        return null;
-    }
-
-    private INode parseFactor() {
-        return null;
-    }
-
-    private INode parseIdentifier() {
-        return null;
+    // Checks if the first symbols in our stream is an identifier
+    private Boolean parseIdentifier() {
+        if(nextLex.token() == Token.IDENT){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 }
