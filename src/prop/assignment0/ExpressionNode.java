@@ -1,6 +1,11 @@
 package prop.assignment0;
 
 public class ExpressionNode implements INode {
+
+    // <expr> -> <term>, [('+' | '-'), <expr>]
+
+    TermNode tn = new TermNode();
+
     @Override
     public Object evaluate(Object[] args) throws Exception {
         return null;
@@ -10,4 +15,5 @@ public class ExpressionNode implements INode {
     public void buildString(StringBuilder builder, int tabs) {
 
     }
+
 }
