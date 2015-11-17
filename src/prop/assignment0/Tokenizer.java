@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Tokenizer implements ITokenizer {
 
     Scanner sc = new Scanner();
-    char currentchar = ' ';
+    char currentchar;
     String value;
     Token token;
 
@@ -25,6 +25,7 @@ public class Tokenizer implements ITokenizer {
     @Override
     public void open(String fileName) throws IOException, TokenizerException {
         sc.open(fileName);
+        getChar();
     }
 
     @Override
@@ -173,10 +174,11 @@ public class Tokenizer implements ITokenizer {
         } // Switch
         value = "";
         for(char ch : chars){
-            value = value + ch;
+            if(!Character.isWhitespace(ch) && ch != 0){
+                value = value + ch;
+            }
         }
         stream = stream + value;
-        //System.out.print("Token: "+token+" \t\tLexeme: "+ output+"\n");
     }
 
     public void clearChars(){
