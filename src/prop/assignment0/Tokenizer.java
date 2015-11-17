@@ -1,15 +1,18 @@
 package prop.assignment0;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Tokenizer implements ITokenizer {
 
     Scanner sc = new Scanner();
-    char nextChar = ' ';
-    Token nextToken;
+    char currentchar = ' ';
+    String value;
+    Token token;
 
-    char[] lexeme = new char[100];
-    int lexlen;
+    String stream = "";
+    char[] chars = new char[100];
+    int charslength;
 
     int charclass;
 
@@ -26,7 +29,8 @@ public class Tokenizer implements ITokenizer {
 
     @Override
     public Lexeme current() {
-        Lexeme lex = new Lexeme(nextChar,nextToken);
+        tokenize();
+        Lexeme lex = new Lexeme(value,token);
         return lex;
     }
 
@@ -46,12 +50,12 @@ public class Tokenizer implements ITokenizer {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        nextChar = sc.current();
+        currentchar = sc.current();
         if(sc.current() != Scanner.EOF){
-            if(Character.isLetter(nextChar)){
+            if(Character.isLetter(currentchar)){
                 charclass = LETTER;
             }
-            else if(Character.isDigit(nextChar)){
+            else if(Character.isDigit(currentchar)){
                 charclass = DIGIT;
             }
             else charclass = UNKNOWN;
@@ -62,9 +66,9 @@ public class Tokenizer implements ITokenizer {
 
     // A method to add nextChar to lexeme
     public void addChar(){
-        if(lexlen <= 98){
-            lexeme[lexlen++] = nextChar;
-            lexeme[lexlen] = 0;
+        if(charslength <= 98){
+            chars[charslength++] = currentchar;
+            chars[charslength] = 0;
         }
         else
             System.out.print("Error - lexeme is too long \n");
@@ -72,7 +76,7 @@ public class Tokenizer implements ITokenizer {
 
     // A method to call getChar until it returns a non-whitespace character
     public void getNonBlank(){
-        while(Character.isSpaceChar(nextChar)){
+        while(Character.isSpaceChar(currentchar)){
             getChar();
         }
     }
@@ -81,63 +85,64 @@ public class Tokenizer implements ITokenizer {
         switch (ch){
             case '(':
                 addChar();
-                nextToken = Token.LEFT_PAREN;
+                token = Token.LEFT_PAREN;
                 break;
             case ')':
                 addChar();
-                nextToken = Token.RIGHT_PAREN;
+                token = Token.RIGHT_PAREN;
                 break;
             case '+':
                 addChar();
-                nextToken = Token.ADD_OP;
+                token = Token.ADD_OP;
                 break;
             case '-':
                 addChar();
-                nextToken = Token.SUB_OP;
+                token = Token.SUB_OP;
                 break;
             case '*':
                 addChar();
-                nextToken = Token.MULT_OP;
+                token = Token.MULT_OP;
                 break;
             case '/':
                 addChar();
-                nextToken = Token.DIV_OP;
+                token = Token.DIV_OP;
                 break;
             case '=':
                 addChar();
-                nextToken = Token.ASSIGN_OP;
+                token = Token.ASSIGN_OP;
                 break;
             case ';':
                 addChar();
-                nextToken = Token.SEMICOLON;
+                token = Token.SEMICOLON;
                 break;
             case '{':
                 addChar();
-                nextToken = Token.LEFT_CURLY;
+                token = Token.LEFT_CURLY;
                 break;
             case '}':
                 addChar();
-                nextToken = Token.RIGHT_CURLY;
+                token = Token.RIGHT_CURLY;
                 break;
             default:
                 addChar();
-                nextToken = Token.EOF;
+                token = Token.EOF;
         }
     }
 
-    public void lex(){
-        lexlen = 0;
+    public void tokenize(){
+        charslength = 0;
+        clearChars();
         getNonBlank();
         switch (charclass){
             // Parse identifiers
             case LETTER:
                 addChar();
                 getChar();
-                while(charclass == LETTER || charclass == DIGIT){
+                while(charclass == LETTER){
                     addChar();
                     getChar();
                 }
-                nextToken = Token.IDENT;
+                token = Token.IDENT;
                 break;
 
             // Parse integer literals
@@ -148,28 +153,33 @@ public class Tokenizer implements ITokenizer {
                     addChar();
                     getChar();
                 }
-                nextToken = Token.INT_LIT;
+                token = Token.INT_LIT;
                 break;
 
             // Parentheses and operators
             case UNKNOWN:
-                lookup(nextChar);
+                lookup(currentchar);
                 getChar();
                 break;
 
             // EOF
             case EOF:
-                nextToken = Token.EOF;
-                lexeme[0] = 'E';
-                lexeme[1] = 'O';
-                lexeme[2] = 'F';
-                lexeme[3] = 0;
+                token = Token.EOF;
+                chars[0] = 'E';
+                chars[1] = 'O';
+                chars[2] = 'F';
+                chars[3] = 0;
                 break;
         } // Switch
-        String output = "";
-        for(char str : lexeme){
-            output = output + str;
+        value = "";
+        for(char ch : chars){
+            value = value + ch;
         }
-        System.out.print("Token: "+nextToken+" \t\tLexeme: "+ output+"\n");
+        stream = stream + value;
+        //System.out.print("Token: "+token+" \t\tLexeme: "+ output+"\n");
+    }
+
+    public void clearChars(){
+        chars = new char[100];
     }
 }

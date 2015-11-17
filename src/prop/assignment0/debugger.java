@@ -12,10 +12,18 @@ public class debugger {
                     throw new Exception("Incorrect number of parameters to program.");
                 inputFileName = args[0];
                 outputFileName = args[1];
-                tk.open(inputFileName);
-                while(tk.charclass != tk.EOF){
-                    tk.lex();
-                }
+                Parser parser = new Parser();
+                parser.open(inputFileName);
+                INode root = parser.parse();
+                System.out.print(parser.stream+" < här ska texten vara");
+                //root.evaluate(null);
+                //StringBuilder builder = new StringBuilder();
+                //builder.append("PARSE TREE:\n");
+                //root.buildString(builder, 0);
+                //builder.append("\nEVALUATION:\n");
+
+                //System.out.print(builder);
+
             }
             catch (Exception exception) {
                 System.out.println("EXCEPTION: " + exception);

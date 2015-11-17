@@ -10,4 +10,6 @@ public class FactorNode implements INode {
     public void buildString(StringBuilder builder, int tabs) {
 
     }
+
+    // <factor> -> <int> | '(', <expr>, ')'
 }

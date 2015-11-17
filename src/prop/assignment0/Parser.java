@@ -1,9 +1,16 @@
 package prop.assignment0;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 public class Parser implements IParser {
-    Tokenizer tk;
+    Tokenizer tk = new Tokenizer();
+    ArrayList<Lexeme> lexemes = new ArrayList<>();
+    String stream = "";
+    Pattern intpat = Pattern.compile("^[0-9]");
+    Pattern idpat = Pattern.compile("^[a-z]+");
+
 
     @Override
     public void open(String fileName) throws IOException, TokenizerException {
@@ -12,7 +19,9 @@ public class Parser implements IParser {
 
     @Override
     public INode parse() throws IOException, TokenizerException, ParserException {
-        return parseAssignment();
+        
+        return new AssignmentNode();
+        //return parseAssignment();
     }
 
     @Override
@@ -20,10 +29,17 @@ public class Parser implements IParser {
         tk.close();
     }
 
-    //TODO Get a list of tokens from Tokenizer
+    public void buildStream(){
+        for(Lexeme lex : lexemes){
+            stream = stream + lex.value().toString();
+        }
+    }
+
+    //TODO get a list of tokens from Tokenizer
+
     public INode parseAssignment(){
         INode id = parseIdentifier();
-        // check '='
+        // check'='
         INode exp = parseExpression();
         return null;
     }
@@ -46,4 +62,5 @@ public class Parser implements IParser {
     private INode parseIdentifier() {
         return null;
     }
+
 }
