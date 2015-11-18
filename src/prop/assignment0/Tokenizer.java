@@ -43,7 +43,13 @@ public class Tokenizer implements ITokenizer {
     @Override
     public void moveNext() throws IOException, TokenizerException {
         this.tokenize();
-        lex = new Lexeme(new String(chars), token);
+        String value = "";
+        for(char ch : chars){
+            if(!Character.isWhitespace(ch) && ch != 0){
+                value = value + ch;
+            }
+        }
+        lex = new Lexeme(value, token);
     }
 
     @Override

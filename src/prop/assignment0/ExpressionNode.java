@@ -18,7 +18,16 @@ public class ExpressionNode implements INode {
     // <expr> -> <term>, [('+' | '-'), <expr>]
     @Override
     public Object evaluate(Object[] args) throws Exception {
-        return null;
+        double left = Double.parseDouble(term.evaluate(null).toString());
+        if(operator != null){
+            double right = Double.parseDouble(sub_expression.evaluate(null).toString());
+            if(operator.token() == Token.ADD_OP){
+                return left + right;
+            }else if(operator.token() == Token.SUB_OP){
+                return left - right;
+            }
+        }
+        return left;
     }
 
     @Override

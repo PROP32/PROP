@@ -15,7 +15,12 @@ public class AssignmentNode implements INode {
     // <assign> -> id, '=', <expr>, ';'
     @Override
     public Object evaluate(Object[] args) throws Exception {
-        return null;
+        String left = "";
+        left += identifier.value();
+        left += assign_op.value();
+
+        left += expression.evaluate(null);
+        return left;
     }
 
     @Override
