@@ -12,7 +12,7 @@ public class AssignmentNode implements INode {
         this.expression = expr;
         this.semicolon = semicolon;
     }
-
+    // <assign> -> id, '=', <expr>, ';'
     @Override
     public Object evaluate(Object[] args) throws Exception {
         return null;

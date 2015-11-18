@@ -15,6 +15,7 @@ public class ExpressionNode implements INode {
         this.sub_expression = sub_expression;
     }
 
+    // <expr> -> <term>, [('+' | '-'), <expr>]
     @Override
     public Object evaluate(Object[] args) throws Exception {
         return null;
@@ -43,4 +44,5 @@ public class ExpressionNode implements INode {
             builder.append("\t");
         }
     }
+
 }

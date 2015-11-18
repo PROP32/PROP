@@ -47,4 +47,6 @@ public class FactorNode implements INode {
             builder.append("\t");
         }
     }
+
+    // <factor> -> <int> | '(', <expr>, ')'
 }

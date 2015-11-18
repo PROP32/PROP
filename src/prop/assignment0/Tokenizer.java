@@ -1,15 +1,17 @@
 package prop.assignment0;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Tokenizer implements ITokenizer {
-
     private Scanner sc;
-    private char nextChar;
-    private Token nextToken;
+    private char currentchar;
+    private String value;
+    private Token token;
 
-    private char[] lexeme;
-    private int lexlen;
+    private String stream;
+    private char[] chars;
+    private int charslength;
     private Lexeme lex = null;
 
     int charclass;
@@ -22,13 +24,15 @@ public class Tokenizer implements ITokenizer {
 
     public Tokenizer(){
         this.sc = new Scanner();
-        this.nextChar = ' ';
-        this.lexeme = new char[100];
+        this.currentchar = ' ';
+        this.chars = new char[100];
+        this.stream = "";
     }
 
     @Override
     public void open(String fileName) throws IOException, TokenizerException {
         sc.open(fileName);
+        getChar();
     }
 
     @Override
@@ -38,8 +42,8 @@ public class Tokenizer implements ITokenizer {
 
     @Override
     public void moveNext() throws IOException, TokenizerException {
-        this.lex();
-        lex = new Lexeme(new String(lexeme), nextToken);
+        this.tokenize();
+        lex = new Lexeme(new String(chars), token);
     }
 
     @Override
@@ -53,12 +57,12 @@ public class Tokenizer implements ITokenizer {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        nextChar = sc.current();
+        currentchar = sc.current();
         if(sc.current() != Scanner.EOF){
-            if(Character.isLetter(nextChar)){
+            if(Character.isLetter(currentchar)){
                 charclass = LETTER;
             }
-            else if(Character.isDigit(nextChar)){
+            else if(Character.isDigit(currentchar)){
                 charclass = DIGIT;
             }
             else charclass = UNKNOWN;
@@ -69,9 +73,9 @@ public class Tokenizer implements ITokenizer {
 
     // A method to add nextChar to lexeme
     public void addChar(){
-        if(lexlen <= 98){
-            lexeme[lexlen++] = nextChar;
-            lexeme[lexlen] = 0;
+        if(charslength <= 98){
+            chars[charslength++] = currentchar;
+            chars[charslength] = 0;
         }
         else
             System.out.print("Error - lexeme is too long \n");
@@ -79,72 +83,73 @@ public class Tokenizer implements ITokenizer {
 
     // A method to call getChar until it returns a non-whitespace character
     public void getNonBlank(){
-        while(Character.isSpaceChar(nextChar)){
+        while(Character.isSpaceChar(currentchar)){
             getChar();
         }
     }
-
+    //TODO Use regex patterns instead?
     public void lookup(char ch){
         switch (ch){
             case '(':
                 addChar();
-                nextToken = Token.LEFT_PAREN;
+                token = Token.LEFT_PAREN;
                 break;
             case ')':
                 addChar();
-                nextToken = Token.RIGHT_PAREN;
+                token = Token.RIGHT_PAREN;
                 break;
             case '+':
                 addChar();
-                nextToken = Token.ADD_OP;
+                token = Token.ADD_OP;
                 break;
             case '-':
                 addChar();
-                nextToken = Token.SUB_OP;
+                token = Token.SUB_OP;
                 break;
             case '*':
                 addChar();
-                nextToken = Token.MULT_OP;
+                token = Token.MULT_OP;
                 break;
             case '/':
                 addChar();
-                nextToken = Token.DIV_OP;
+                token = Token.DIV_OP;
                 break;
             case '=':
                 addChar();
-                nextToken = Token.ASSIGN_OP;
+                token = Token.ASSIGN_OP;
                 break;
             case ';':
                 addChar();
-                nextToken = Token.SEMICOLON;
+                token = Token.SEMICOLON;
                 break;
             case '{':
                 addChar();
-                nextToken = Token.LEFT_CURLY;
+                token = Token.LEFT_CURLY;
                 break;
             case '}':
                 addChar();
-                nextToken = Token.RIGHT_CURLY;
+                token = Token.RIGHT_CURLY;
                 break;
             default:
                 addChar();
-                nextToken = Token.EOF;
+                token = Token.EOF;
         }
     }
 
-    public void lex(){
-        lexlen = 0;
+    public void tokenize(){
+        charslength = 0;
+        clearChars();
         getNonBlank();
         switch (charclass){
             // Parse identifiers
             case LETTER:
                 addChar();
                 getChar();
-                while(charclass == LETTER || charclass == DIGIT){
+                while(charclass == LETTER){
                     addChar();
                     getChar();
                 }
-                nextToken = Token.IDENT;
+                token = Token.IDENT;
                 break;
 
             // Parse integer literals
@@ -155,30 +160,36 @@ public class Tokenizer implements ITokenizer {
                     addChar();
                     getChar();
                 }
-                nextToken = Token.INT_LIT;
+                token = Token.INT_LIT;
                 break;
 
             // Parentheses and operators
             case UNKNOWN:
-                lookup(nextChar);
+                lookup(currentchar);
                 getChar();
                 break;
 
             // EOF
             case EOF:
-                nextToken = Token.EOF;
-                lexeme[0] = 'E';
-                lexeme[1] = 'O';
-                lexeme[2] = 'F';
-                lexeme[3] = 0;
+                token = Token.EOF;
+                chars[0] = 'E';
+                chars[1] = 'O';
+                chars[2] = 'F';
+                chars[3] = 0;
                 break;
         } // Switch
 
         //debug
-        String output = "";
-        for(char str : lexeme){
-            output = output + str;
+        value = "";
+        for(char ch : chars){
+            if(!Character.isWhitespace(ch) && ch != 0){
+                value = value + ch;
+            }
         }
-        System.out.print("Token: "+nextToken+" \t\tLexeme: "+ output+"\n");
+        stream = stream + value;
+    }
+
+    public void clearChars(){
+        chars = new char[100];
     }
 }

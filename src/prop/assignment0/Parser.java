@@ -1,6 +1,7 @@
 package prop.assignment0;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Parser implements IParser {
     Tokenizer token;
