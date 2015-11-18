@@ -24,8 +24,6 @@ public class Parser implements IParser {
         System.out.println("lexemes = " + lexemes.size());
         buildStream();
 
-        parseIdentifier();
-
         System.out.println(stream); // Just for testing
         System.out.println(nextLex); // Just for testing
 
@@ -53,6 +51,7 @@ public class Parser implements IParser {
     public INode parseAssignment(){
         // id, '=', expr, ';'
         if(parseIdentifier()){
+            System.out.print("----AssignmentNode\n");
             nextLexeme();
             if(nextLex.token() == Token.ASSIGN_OP){
                 nextLexeme();
@@ -60,6 +59,8 @@ public class Parser implements IParser {
                 if(nextLex.token() == Token.SEMICOLON){
                     System.out.print("Great success!");
                     return new AssignmentNode();
+                }else{
+                    System.out.print("Incorrect expression!");
                 }
             }
         }
@@ -68,6 +69,7 @@ public class Parser implements IParser {
 
     private void parseExpression() {
         // term , [ ( '+' | '-' ) , expr ]
+        System.out.print("----ExpressionNode\n");
         parseTerm();
         if(nextLex.token() == Token.ADD_OP || nextLex.token() == Token.SUB_OP){
             nextLexeme();
@@ -77,6 +79,7 @@ public class Parser implements IParser {
 
     private void parseTerm() {
         // factor , [ ( '*' | '/' ) , expr ]
+        System.out.print("----TermNode\n");
         parseFactor();
         if(nextLex.token() == Token.MULT_OP || nextLex.token() == Token.DIV_OP){
             nextLexeme();
@@ -86,6 +89,7 @@ public class Parser implements IParser {
 
     private void parseFactor() {
         // int | '(' , expr , ')'
+        System.out.print("----FactorNode\n");
         if(nextLex.token() == Token.INT_LIT){
             nextLexeme();
         }else if(nextLex.token() == Token.LEFT_PAREN){
