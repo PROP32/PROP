@@ -17,7 +17,15 @@ public class Parser implements IParser {
 
     @Override
     public INode parse() throws IOException, TokenizerException, ParserException {
-        INode root = parseAssignment();
+        INode root = null;
+        moveCurrentLexeme();
+        Lexeme firstLexeme = getCurrentLexeme();
+        if (firstLexeme.token() == Token.LEFT_CURLY) {
+            root = parseBlock();
+        }
+        else if (firstLexeme.token() == Token.IDENT) {
+            root = parseAssignment();
+        }
 
         return root;
     }
@@ -27,7 +35,37 @@ public class Parser implements IParser {
         token.close();
     }
 
-    INode parseAssignment(){
+    INode parseBlock() {
+        INode block = null;
+        Lexeme leftCurly = getCurrentLexeme();
+
+        StatementsNode statement = parseStatement();
+
+        Lexeme rightCurly = getCurrentLexeme();
+        if (rightCurly.token() == Token.RIGHT_CURLY) {
+            block = new BlockNode(leftCurly, rightCurly, statement);
+        }
+        return block;
+    }
+
+    StatementsNode parseStatement() {
+        StatementsNode statement = null;
+
+        moveCurrentLexeme();
+
+        Lexeme currentLexeme = getCurrentLexeme();
+        if (currentLexeme.token()==Token.IDENT) {
+            AssignmentNode assignment = parseAssignment();
+            StatementsNode sub_statements = parseStatement();
+            statement = new StatementsNode(assignment, sub_statements);
+        }
+        else if (currentLexeme.token()==Token.RIGHT_CURLY) {
+            statement = new StatementsNode();
+        }
+        return  statement;
+    }
+
+    AssignmentNode parseAssignment(){
         Lexeme ident = parseIdent();
 
         moveCurrentLexeme();
@@ -46,7 +84,6 @@ public class Parser implements IParser {
     }
 
     Lexeme parseIdent() {
-        moveCurrentLexeme();
         Lexeme lex = getCurrentLexeme();
         if (lex.token() == Token.IDENT) {
             return lex;

@@ -18,9 +18,11 @@ public class ExpressionNode implements INode {
     // <expr> -> <term>, [('+' | '-'), <expr>]
     @Override
     public Object evaluate(Object[] args) throws Exception {
-        double left = Double.parseDouble(term.evaluate(null).toString());
+        Object[] leftEvaluationStack = new Object[100];
+        double left = Double.parseDouble(term.evaluate(leftEvaluationStack).toString());
         if(operator != null){
-            double right = Double.parseDouble(sub_expression.evaluate(null).toString());
+            Object[] rightEvaluationStack = new Object[100];
+            double right = Double.parseDouble(sub_expression.evaluate(rightEvaluationStack).toString());
             if(operator.token() == Token.ADD_OP){
                 return left + right;
             }else if(operator.token() == Token.SUB_OP){

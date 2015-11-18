@@ -71,7 +71,11 @@ public class Tokenizer implements ITokenizer {
             else if(Character.isDigit(currentchar)){
                 charclass = DIGIT;
             }
-            else charclass = UNKNOWN;
+            else if(currentchar == '\r' || currentchar == '\n') {
+                getChar();
+            }
+            else
+                charclass = UNKNOWN;
         }
         else
             charclass = EOF; // Not sure
