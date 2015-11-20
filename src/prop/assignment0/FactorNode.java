@@ -29,6 +29,9 @@ public class FactorNode implements INode {
             if (args.containsKey(str_ident)){
                 num = args.get(str_ident);
             }
+            else{
+                num = 0;
+            }
         }
         else if(expr != null){
             num = expr.evaluate(args);
