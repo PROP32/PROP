@@ -1,5 +1,8 @@
 package prop.assignment0;
 
+import javax.swing.text.html.parser.Entity;
+import java.util.HashMap;
+
 public class BlockNode implements INode{
     private Lexeme left_curly;
     private Lexeme right_curly;
@@ -12,8 +15,14 @@ public class BlockNode implements INode{
     }
 
     @Override
-    public Object evaluate(Object[] args) throws Exception {
-        return null;
+    public Object evaluate(HashMap args) throws Exception {
+        HashMap<String, Object> assigns = new HashMap<String, Object>();
+        statement.evaluate(assigns).toString();
+        String block_result = "";
+        for (HashMap.Entry<String, Object> assign : assigns.entrySet()) {
+            block_result += assign.getKey() + " = " + assign.getValue().toString() + "\n";
+        }
+        return block_result;
     }
 
     @Override

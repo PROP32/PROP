@@ -1,5 +1,7 @@
 package prop.assignment0;
 
+import java.util.HashMap;
+
 public class StatementsNode implements INode{
     private AssignmentNode assignment;
     private StatementsNode next_statement;
@@ -15,8 +17,15 @@ public class StatementsNode implements INode{
     }
 
     @Override
-    public Object evaluate(Object[] args) throws Exception {
-        return null;
+    public Object evaluate(HashMap args) throws Exception {
+        Object assign_result = null;
+        if (assignment != null) {
+            assign_result = assignment.evaluate(args);
+            if (next_statement != null && next_statement.assignment != null) {
+                next_statement.evaluate(args);
+            }
+        }
+        return assign_result;
     }
 
     @Override

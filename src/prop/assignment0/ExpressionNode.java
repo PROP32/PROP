@@ -1,6 +1,9 @@
 package prop.assignment0;
 
+import java.util.HashMap;
+
 public class ExpressionNode implements INode {
+    // <expr> -> <term>, [('+' | '-'), <expr>]
     private Lexeme operator = null;
     private ExpressionNode sub_expression = null;
     private TermNode term = null;
@@ -15,14 +18,11 @@ public class ExpressionNode implements INode {
         this.sub_expression = sub_expression;
     }
 
-    // <expr> -> <term>, [('+' | '-'), <expr>]
     @Override
-    public Object evaluate(Object[] args) throws Exception {
-        Object[] leftEvaluationStack = new Object[100];
-        double left = Double.parseDouble(term.evaluate(leftEvaluationStack).toString());
+    public Object evaluate(HashMap args) throws Exception {
+        double left = Double.parseDouble(term.evaluate(args).toString());
         if(operator != null){
-            Object[] rightEvaluationStack = new Object[100];
-            double right = Double.parseDouble(sub_expression.evaluate(rightEvaluationStack).toString());
+            double right = Double.parseDouble(sub_expression.evaluate(args).toString());
             if(operator.token() == Token.ADD_OP){
                 return left + right;
             }else if(operator.token() == Token.SUB_OP){

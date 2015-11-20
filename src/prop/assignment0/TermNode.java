@@ -1,5 +1,7 @@
 package prop.assignment0;
 
+import java.util.HashMap;
+
 public class TermNode implements INode {
     private FactorNode factor = null;
     private Lexeme operator = null;
@@ -16,10 +18,10 @@ public class TermNode implements INode {
     }
 
     @Override
-    public Object evaluate(Object[] args) throws Exception {
-        double left = Double.parseDouble(factor.evaluate(null).toString());
+    public Object evaluate(HashMap args) throws Exception {
+        double left = Double.parseDouble(factor.evaluate(args).toString());
         if(operator != null){
-            double right = Double.parseDouble(sub_term.evaluate(null).toString());
+            double right = Double.parseDouble(sub_term.evaluate(args).toString());
             if(operator.token() == Token.MULT_OP){
                 return left * right;
             }else if(operator.token() == Token.DIV_OP){

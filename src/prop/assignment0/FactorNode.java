@@ -1,5 +1,7 @@
 package prop.assignment0;
 
+import java.util.HashMap;
+
 public class FactorNode implements INode {
     private Lexeme ident = null;
     private Lexeme left_paran = null;
@@ -17,12 +19,19 @@ public class FactorNode implements INode {
     }
 
     @Override
-    public Object evaluate(Object[] args) throws Exception {
+    public Object evaluate(HashMap args) throws Exception {
         Object num = null;
-        if(left_paran == null){
+        if(ident != null && ident.token() == Token.INT_LIT){
             num = ident.value();
-        }else if(left_paran != null){
-            num = expr.evaluate(null);
+        }
+        else if (ident != null && ident.token() == Token.IDENT){
+            String str_ident = ident.value().toString();
+            if (args.containsKey(str_ident)){
+                num = args.get(str_ident);
+            }
+        }
+        else if(expr != null){
+            num = expr.evaluate(args);
         }
         return num;
     }

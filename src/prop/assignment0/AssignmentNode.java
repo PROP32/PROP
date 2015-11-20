@@ -1,6 +1,10 @@
 package prop.assignment0;
 
+import java.util.HashMap;
+import java.util.Objects;
+
 public class AssignmentNode implements INode {
+    // <assign> -> id, '=', <expr>, ';'
     private Lexeme identifier;
     private ExpressionNode expression;
     private Lexeme assign_op;
@@ -12,15 +16,16 @@ public class AssignmentNode implements INode {
         this.expression = expr;
         this.semicolon = semicolon;
     }
-    // <assign> -> id, '=', <expr>, ';'
-    @Override
-    public Object evaluate(Object[] args) throws Exception {
-        String left = "";
-        left += identifier.value();
-        left += assign_op.value();
 
-        left += expression.evaluate(null);
-        return left;
+    @Override
+    public Object evaluate(HashMap args) throws Exception {
+        String str_identifier = (String)identifier.value();
+        Object expression_value = expression.evaluate(args);
+
+        args.put(str_identifier, expression_value);
+
+        String result = str_identifier + " = " + expression_value.toString() + "\n";
+        return result;
     }
 
     @Override
