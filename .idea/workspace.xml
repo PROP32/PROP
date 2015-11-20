@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="171c5f10-fe4e-4f1c-a4cf-b21b2965a753" name="Default" comment="Merge changes">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/BlockNode.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/BlockNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/ExpressionNode.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/ExpressionNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/Parser.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/Parser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/StatementsNode.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/StatementsNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/Tokenizer.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/Tokenizer.class" />
+    <list default="true" id="171c5f10-fe4e-4f1c-a4cf-b21b2965a753" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/AssignmentNode.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/AssignmentNode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/FactorNode.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/FactorNode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/INode.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/INode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/Program.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/Program.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/TermNode.class" afterPath="$PROJECT_DIR$/out/production/PROP/prop/assignment0/TermNode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/AssignmentNode.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/AssignmentNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/BlockNode.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/BlockNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/ExpressionNode.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/ExpressionNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/FactorNode.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/FactorNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/INode.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/INode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/StatementsNode.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/StatementsNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/TermNode.java" afterPath="$PROJECT_DIR$/src/prop/assignment0/TermNode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/parsetree0.txt" afterPath="$PROJECT_DIR$/src/prop/assignment0/parsetree0.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prop/assignment0/program0.txt" afterPath="$PROJECT_DIR$/src/prop/assignment0/program0.txt" />
     </list>
     <list id="95f147a4-5567-4c59-b04c-66c08630d2a3" name="Failed commit: Default" comment="Merge changes" />
     <ignored path="PROP.iws" />
@@ -38,21 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Tokenizer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Tokenizer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AssignmentNode.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AssignmentNode.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/prop/assignment0/AssignmentNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.5163044">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,33 +45,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parsetree0.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/parsetree0.txt">
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.236413">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lexeme.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Lexeme.java">
+      <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Program.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding>
-                <element signature="e#284#285#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExpressionNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/ExpressionNode.java">
+      <file leaf-file-name="IParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/IParser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parsetree0.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/parsetree0.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -96,27 +91,27 @@
         <entry file="file://$PROJECT_DIR$/src/prop/assignment0/parsetree2.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="67" column="12" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
+              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatementsNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/StatementsNode.java">
+      <file leaf-file-name="parsetree1.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/parsetree1.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="program0.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/program0.txt">
+      <file leaf-file-name="program1.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/program1.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -135,14 +130,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Program.java">
+      <file leaf-file-name="program0.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prop/assignment0/program0.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -178,14 +171,14 @@
         <option value="$PROJECT_DIR$/src/prop/assignment0/Tokenizer.java" />
         <option value="$PROJECT_DIR$/src/prop/assignment0/parsetree0.txt" />
         <option value="$PROJECT_DIR$/src/prop/assignment0/program2.txt" />
-        <option value="$PROJECT_DIR$/src/prop/assignment0/program0.txt" />
         <option value="$PROJECT_DIR$/src/prop/assignment0/INode.java" />
         <option value="$PROJECT_DIR$/src/prop/assignment0/ExpressionNode.java" />
         <option value="$PROJECT_DIR$/src/prop/assignment0/TermNode.java" />
         <option value="$PROJECT_DIR$/src/prop/assignment0/FactorNode.java" />
         <option value="$PROJECT_DIR$/src/prop/assignment0/BlockNode.java" />
-        <option value="$PROJECT_DIR$/src/prop/assignment0/AssignmentNode.java" />
         <option value="$PROJECT_DIR$/src/prop/assignment0/StatementsNode.java" />
+        <option value="$PROJECT_DIR$/src/prop/assignment0/program0.txt" />
+        <option value="$PROJECT_DIR$/src/prop/assignment0/AssignmentNode.java" />
       </list>
     </option>
   </component>
@@ -631,7 +624,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447860974917</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implement evaluation for Grammar 2">
+      <created>1448039850457</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1448039850457</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -688,7 +687,8 @@
     <MESSAGE value="Implement Parser Part" />
     <MESSAGE value="Merge changes" />
     <MESSAGE value="Initial Grammar 2 Implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Grammar 2 Implementation" />
+    <MESSAGE value="Implement evaluation for Grammar 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement evaluation for Grammar 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -739,7 +739,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="29" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -796,10 +796,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding>
-            <element signature="e#4391#4392#0" expanded="true" />
-            <element signature="e#4428#4429#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -908,10 +905,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#4391#4392#0" expanded="true" />
-            <element signature="e#4428#4429#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -991,13 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/IParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Lexeme.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1009,17 +996,6 @@
             <element signature="e#328#329#0" expanded="false" />
             <element signature="e#369#370#0" expanded="false" />
             <element signature="e#413#414#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="47" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="47" />
-          <folding>
-            <element signature="e#4391#4392#0" expanded="true" />
-            <element signature="e#4428#4429#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1050,34 +1026,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/program1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/prop/assignment0/INode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/program2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/parsetree1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1098,14 +1050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/program0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/prop/assignment0/ExpressionNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1122,16 +1066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Lexeme.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1139,6 +1073,38 @@
           <folding>
             <element signature="e#284#285#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/StatementsNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/program2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="3" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/program1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/program0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1153,20 +1119,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/AssignmentNode.java">
+    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Program.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/StatementsNode.java">
+    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/IParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/parsetree1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1174,16 +1156,26 @@
     <entry file="file://$PROJECT_DIR$/src/prop/assignment0/parsetree2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="12" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prop/assignment0/parsetree0.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.236413">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prop/assignment0/AssignmentNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5163044">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

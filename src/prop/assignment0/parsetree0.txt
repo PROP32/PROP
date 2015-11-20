@@ -1,47 +1,20 @@
 PARSE TREE:
-BlockNode
-LEFT_CURLY {
-	StatementsNode
-		AssignmentNode
-			IDENT a
-			ASSIGN_OP =
-			ExpressionNode
-				TermNode
-					FactorNode
-						INT_LIT 1
-					MULT_OP *
-					TermNode
-						FactorNode
-							INT_LIT 2
-				ADD_OP +
-				ExpressionNode
-					TermNode
-						FactorNode
-							LEFT_PAREN (
-							ExpressionNode
-								TermNode
-									FactorNode
-										INT_LIT 3
-								SUB_OP -
-								ExpressionNode
-									TermNode
-										FactorNode
-											INT_LIT 4
-							RIGHT_PAREN )
-						DIV_OP /
-						TermNode
-							FactorNode
-								INT_LIT 5
-			SEMICOLON ;
-		StatementsNode
-			AssignmentNode
-				IDENT b
-				ASSIGN_OP =
-				ExpressionNode
-					TermNode
-						FactorNode
-							INT_LIT 4
-					SUB_OP -
+AssignmentNode
+	IDENT a
+	ASSIGN_OP =
+	ExpressionNode
+		TermNode
+			FactorNode
+				INT_LIT 1
+			MULT_OP *
+			TermNode
+				FactorNode
+					INT_LIT 2
+		ADD_OP +
+		ExpressionNode
+			TermNode
+				FactorNode
+					LEFT_PAREN (
 					ExpressionNode
 						TermNode
 							FactorNode
@@ -50,39 +23,13 @@ LEFT_CURLY {
 						ExpressionNode
 							TermNode
 								FactorNode
-									IDENT a
-							ADD_OP +
-							ExpressionNode
-								TermNode
-									FactorNode
-										INT_LIT 6
-									DIV_OP /
-									TermNode
-										FactorNode
-											INT_LIT 5
-										DIV_OP /
-										TermNode
-											FactorNode
-												INT_LIT 2
-				SEMICOLON ;
-			StatementsNode
-				AssignmentNode
-					IDENT c
-					ASSIGN_OP =
-					ExpressionNode
-						TermNode
-							FactorNode
-								IDENT b
-						ADD_OP +
-						ExpressionNode
-							TermNode
-								FactorNode
-									IDENT a
-					SEMICOLON ;
-				StatementsNode
-RIGHT_CURLY }
+									INT_LIT 4
+					RIGHT_PAREN )
+				DIV_OP /
+				TermNode
+					FactorNode
+						INT_LIT 5
+	SEMICOLON ;
 
 EVALUATION:
 a = 1.8
-b = 5.2
-c = 7.0

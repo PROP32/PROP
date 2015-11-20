@@ -22,7 +22,9 @@ public class AssignmentNode implements INode {
         String str_identifier = (String)identifier.value();
         Object expression_value = expression.evaluate(args);
 
-        args.put(str_identifier, expression_value);
+        if (args != null) {
+            args.put(str_identifier, expression_value);
+        }
 
         String result = str_identifier + " = " + expression_value.toString() + "\n";
         return result;
